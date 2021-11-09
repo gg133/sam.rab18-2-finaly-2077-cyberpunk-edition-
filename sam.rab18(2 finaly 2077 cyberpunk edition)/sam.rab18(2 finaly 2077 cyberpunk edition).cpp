@@ -1,5 +1,7 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
+#include <cmath>
+#include <ctime>
 using namespace std;
 int menu_choise;
 int colorCross;
@@ -402,7 +404,7 @@ void MenuOptions()
 void Rules()
 {
     system("cls");
-    cout << "Правила" << endl;;
+    cout << "Игроки по очереди ставят на свободные клетки поля 3х3, 4x4, 5x5 знаки (один всегда крестики, другой всегда нолики). \nПервый, выстроивший в ряд 3 своих фигур по вертикали, горизонтали или диагонали, выигрывает." << endl;;
 
 }
 
@@ -648,7 +650,7 @@ int main()
     int pickMenuOpt;
     while (true) {
         system("cls");
-        cout << "[!] Мненю\n\n[1] Начать игру\n[2] Настройки\n[3] Правила\n[4] Выйти\n\n [$] Выберите пункт из меню: ";
+        cout << "[!] Меню\n\n[1] Начать игру\n[2] Настройки\n[3] Правила\n[4] Выйти\n\n [$] Выберите пункт из меню: ";
         cin >> pickMenu;
         if (pickMenu == 1)
         {
@@ -751,6 +753,12 @@ int main()
                     }
                     break;
                 }
+                else if (gameTitle == 3)
+                {
+                    system("cls");
+                    /*BackToMenu();*/
+                    break;
+                }
             }
 
         }
@@ -813,6 +821,7 @@ int main()
             BackToMenu();
 
         }
+        
         else if (pickMenu == 4)
         {
             cout << "bb";
