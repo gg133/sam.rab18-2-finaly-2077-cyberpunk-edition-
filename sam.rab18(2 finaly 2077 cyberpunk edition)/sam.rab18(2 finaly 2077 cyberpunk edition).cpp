@@ -4,12 +4,12 @@
 #include <ctime>
 using namespace std;
 int menu_choise;
-int colorCross;
-int colorNull;
-int ternPick;
+int colorCross=91;
+int colorNull=92;
+int ternPick = 1;
 
-int sizeBoard;
-int gameTitle;
+int sizeBoard=1;
+int gameTitle=1;
 const string PLAYER1 = "X";
 string startPlayer = PLAYER1;
 const string PLAYER2 = "O";
@@ -173,14 +173,14 @@ void choosePoint3()
     int point;
     while (true)
     {
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+        cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
         cin >> point;
         point--;
         if (point < 0 || point > 8 || board3[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board3[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
         {
             system("cls");
             DrawBoard3();
-            cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+            cout << "íåïðàâèëüíî\n";
             continue;
         }
         break;
@@ -205,14 +205,14 @@ void playBot3()
     {
         if (startPlayer == PLAYER1)
         {
-            cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+            cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
             cin >> point;
             point--;
             if (point < 0 || point > 8 || board3[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board3[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
             {
                 system("cls");
                 DrawBoard3();
-                cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+                cout << "íåïðàâèëüíî\n";
                 continue;
             }
             break;
@@ -247,14 +247,14 @@ void choosePoint4()
     int point;
     while (true)
     {
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+        cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
         cin >> point;
         point--;
         if (point < 0 || point > 16 || board4[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board4[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
         {
             system("cls");
             DrawBoard4();
-            cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+            cout << "íåïðàâèëüíî\n";
             continue;
         }
         break;
@@ -279,14 +279,14 @@ void playBot4()
     {
         if (startPlayer == PLAYER1)
         {
-            cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+            cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
             cin >> point;
             point--;
             if (point < 0 || point > 15 || board4[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board4[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
             {
                 system("cls");
                 DrawBoard4();
-                cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+                cout << "íåïðàâèëüíî\n";
                 continue;
             }
             break;
@@ -321,14 +321,14 @@ void choosePoint5()
     int point;
     while (true)
     {
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+        cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
         cin >> point;
         point--;
         if (point < 0 || point > 24 || board5[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board5[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
         {
             system("cls");
             DrawBoard5();
-            cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+            cout << "íåïðàâèëüíî\n";
             continue;
         }
         break;
@@ -353,14 +353,14 @@ void playBot5()
     {
         if (startPlayer == PLAYER1)
         {
-            cout << "Ð˜Ð³Ñ€Ð¾Ðº " << startPlayer << " Ð²Ñ‹Ð±ÐµÑ€Ð¸ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ\n";
+            cout << "Èãðîê " << startPlayer << " âûáåðè ïîçèöèþ\n";
             cin >> point;
             point--;
             if (point < 0 || point > 24 || board5[point] == "\x1b[" + to_string(colorNull) + "mO\x1b[0m" || board5[point] == "\x1b[" + to_string(colorCross) + "mX\x1b[0m")
             {
                 system("cls");
                 DrawBoard4();
-                cout << "Ð½ÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾\n";
+                cout << "íåïðàâèëüíî\n";
                 continue;
             }
             break;
@@ -391,33 +391,33 @@ void playBot5()
 }
 
 
-void MenuOptions()
+void showMenuOptions()
 {
     setlocale(0, "");
     system("cls");
-    cout << "[!] ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸\n\n[1] Ð¦Ð²ÐµÑ‚ ÐºÑ€Ð¸ÑÑ‚Ð¸ÐºÐ° Ð¸ Ð½Ð¾Ð»Ð¸ÐºÐ°\n[2] ÐšÑ‚Ð¾ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ñ…Ð¾Ð´Ð¸Ñ‚\n[3] Ð Ð°Ð·Ð¼ÐµÑ€ Ð¿Ð¾Ð»Ñ\n[4] Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ Ð² Ð³Ð»Ð°Ð²Ð½Ð¾Ðµ Ð¼ÐµÐ½ÑŽ\n\n [#] Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð¸Ð· Ð¼ÐµÐ½ÑŽ: ";
+    cout << "[!] Íàñòðîéêè\n\n[1] Öâåò êðèñòèêà è íîëèêà\n[2] Êòî ïåðâûé õîäèò\n[3] Ðàçìåð ïîëÿ\n[4] Âåðíóòüñÿ â ãëàâíîå ìåíþ\n\n [#] Âûáåðèòå ïóíêò èç ìåíþ: ";
 
 }
 
 
 
-void Rules()
+void showRules()
 {
     system("cls");
-    cout << "Ð˜Ð³Ñ€Ð¾ÐºÐ¸ Ð¿Ð¾ Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð¸ ÑÑ‚Ð°Ð²ÑÑ‚ Ð½Ð° ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ñ‹Ðµ ÐºÐ»ÐµÑ‚ÐºÐ¸ Ð¿Ð¾Ð»Ñ 3Ñ…3, 4x4, 5x5 Ð·Ð½Ð°ÐºÐ¸ (Ð¾Ð´Ð¸Ð½ Ð²ÑÐµÐ³Ð´Ð° ÐºÑ€ÐµÑÑ‚Ð¸ÐºÐ¸, Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð²ÑÐµÐ³Ð´Ð° Ð½Ð¾Ð»Ð¸ÐºÐ¸). \nÐŸÐµÑ€Ð²Ñ‹Ð¹, Ð²Ñ‹ÑÑ‚Ñ€Ð¾Ð¸Ð²ÑˆÐ¸Ð¹ Ð² Ñ€ÑÐ´ 3 ÑÐ²Ð¾Ð¸Ñ… Ñ„Ð¸Ð³ÑƒÑ€ Ð¿Ð¾ Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»Ð¸, Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»Ð¸ Ð¸Ð»Ð¸ Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»Ð¸, Ð²Ñ‹Ð¸Ð³Ñ€Ñ‹Ð²Ð°ÐµÑ‚." << endl;;
+    cout << "Èãðîêè ïî î÷åðåäè ñòàâÿò íà ñâîáîäíûå êëåòêè ïîëÿ 3õ3, 4x4, 5x5 çíàêè (îäèí âñåãäà êðåñòèêè, äðóãîé âñåãäà íîëèêè). \nÏåðâûé, âûñòðîèâøèé â ðÿä 3 ñâîèõ ôèãóð ïî âåðòèêàëè, ãîðèçîíòàëè èëè äèàãîíàëè, âûèãðûâàåò." << endl;;
 
 }
 
-string tern(int ternPick)
+string switchTern(int ternPick)
 {
     switch (ternPick) {
     case 1: return "X";
     case 2: return "O";
-    default: cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ - Ð¸Ð³Ñ€Ñƒ Ð½Ð°Ñ‡Ð½ÐµÑ‚ ÐºÑ€ÐµÑÑ‚Ð¸Ðº"; cin.clear(); cin.ignore(); return "X";
+    default: cout << "Ââåäåíî íåâåðíîå çíà÷åíèå - èãðó íà÷íåò êðåñòèê"; cin.clear(); cin.ignore(); return "X";
     }
 }
 
-void game3()
+void showGame3()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -436,7 +436,7 @@ void game3()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -446,14 +446,14 @@ void game3()
             startPlayer = PLAYER2;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
 
 }
 
-void gameBot3()
+void showGameBot3()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -472,7 +472,7 @@ void gameBot3()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -482,7 +482,7 @@ void gameBot3()
             startPlayer = BOT;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
@@ -490,7 +490,7 @@ void gameBot3()
 }
 
 
-void game4()
+void showGame4()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -509,7 +509,7 @@ void game4()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -519,14 +519,14 @@ void game4()
             startPlayer = PLAYER2;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
 
 }
 
-void gameBot4()
+void showGameBot4()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -545,7 +545,7 @@ void gameBot4()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -555,7 +555,7 @@ void gameBot4()
             startPlayer = BOT;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
@@ -563,7 +563,7 @@ void gameBot4()
 }
 
 
-void game5()
+void showGame5()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -582,7 +582,7 @@ void game5()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -592,14 +592,14 @@ void game5()
             startPlayer = PLAYER2;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
 
 }
 
-void gameBot5()
+void showGameBot5()
 {
     string result = LOSE;
     while (result == LOSE)
@@ -618,7 +618,7 @@ void gameBot5()
 
     if (result == DRAW)
     {
-        cout << "\nÐÐ¸Ñ‡ÑŒÑ\n";
+        cout << "\nÍè÷üÿ\n";
         system("pause");
         exit(0);
     }
@@ -628,7 +628,7 @@ void gameBot5()
             startPlayer = BOT;
         }
         else startPlayer = PLAYER1;
-        cout << "Ð˜Ð³Ñ€Ð¾Ðº, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¹ Ð¸Ð³Ñ€Ð°ÐµÑ‚ Ð·Ð°: " << startPlayer << " - Ð¿Ð¾Ð±ÐµÐ´Ð¸Ð»\n";
+        cout << "Èãðîê, êîòîðûé èãðàåò çà: " << startPlayer << " - ïîáåäèë\n";
         system("pause");
         exit(0);
     }
@@ -650,14 +650,14 @@ int main()
     int pickMenuOpt;
     while (true) {
         system("cls");
-        cout << "[!] ÐœÐµÐ½ÑŽ\n\n[1] ÐÐ°Ñ‡Ð°Ñ‚ÑŒ Ð¸Ð³Ñ€Ñƒ\n[2] ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸\n[3] ÐŸÑ€Ð°Ð²Ð¸Ð»Ð°\n[4] Ð’Ñ‹Ð¹Ñ‚Ð¸\n\n [$] Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð¿ÑƒÐ½ÐºÑ‚ Ð¸Ð· Ð¼ÐµÐ½ÑŽ: ";
+        cout << "[!] Ìåíþ\n\n[1] Íà÷àòü èãðó\n[2] Íàñòðîéêè\n[3] Ïðàâèëà\n[4] Âûéòè\n\n [$] Âûáåðèòå ïóíêò èç ìåíþ: ";
         cin >> pickMenu;
         if (pickMenu == 1)
         {
             while (true)
             {
                 system("cls");
-                cout << "[!] Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ‚Ð¸Ð¿ Ð¸Ð³Ñ€Ñ‹\n\n[1] Ð”Ð²Ð° Ð¸Ð³Ñ€Ð¾ÐºÐ°\n[2] ÐŸÑ€Ð¾Ñ‚Ð¸Ð² Ð±Ð¾Ñ‚Ð°\n\n[3] Ð’ÐµÑ€Ð½ÑƒÑ‚ÑŒÑÑ Ð² Ð¼ÐµÐ½ÑŽ\n";
+                cout << "[!] Âûáåðèòå òèï èãðû\n\n[1] Äâà èãðîêà\n[2] Ïðîòèâ áîòà\n\n[3] Âåðíóòüñÿ â ìåíþ\n";
                 cin >> gameTitle;
                 if (gameTitle == 1)
                 {
@@ -668,12 +668,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            game3();
+                            showGame3();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = PLAYER2;
-                            game3();
+                            showGame3();
                         }
 
                     }
@@ -682,12 +682,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            game4();
+                            showGame4();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = PLAYER2;
-                            game4();
+                            showGame4();
                         }
                     }
                     break;
@@ -695,12 +695,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            game5();
+                            showGame5();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = PLAYER2;
-                            game5();
+                           showGame5();
                         }
                     }
                     break;
@@ -715,12 +715,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            gameBot3();
+                            showGameBot3();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = BOT;
-                            gameBot3();
+                            showGameBot3();
                         }
                     }
                     break;
@@ -728,12 +728,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            gameBot4();
+                            showGameBot4();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = BOT;
-                            gameBot4();
+                            showGameBot4();
                         }
                     }
                     break;
@@ -741,12 +741,12 @@ int main()
                     {
                         if (startPlayer == "X")
                         {
-                            gameBot5();
+                            showGameBot5();
                         }
                         else if (startPlayer == "O")
                         {
                             startPlayer = BOT;
-                            gameBot5();
+                            showGameBot5();
                         }
                     }
                     break;
@@ -767,14 +767,14 @@ int main()
             while (true)
             {
                 system("cls");
-                MenuOptions();
+                showMenuOptions();
                 cin >> pickMenuOpt;
                 if (pickMenuOpt == 1)
                 {
                     system("cls");
-                    cout << " Ð¦Ð²ÐµÑ‚Ð°: 90 - \x1b[90mÐ¡ÐµÑ€Ñ‹Ð¹\x1b[0m;\n 91 - \x1b[91mÐšÑ€Ð°ÑÐ½Ñ‹Ð¹\x1b[0m;\n 92 - \x1b[92mÐ—ÐµÐ»ÐµÐ½Ñ‹Ð¹\x1b[0m;\n 93 - \x1b[93mÐŸÐµÑÐ¾Ñ‡Ð½Ñ‹Ð¹\x1b[0m;\n 94 - \x1b[94mÐ¡Ð¸Ð½Ð¸Ð¹\x1b[0m;\n 95 - \x1b[95mÐ¤Ð¸Ð¾Ð»ÐµÑ‚Ð¾Ð²Ñ‹Ð¹\x1b[0m;\n 96 - \x1b[96mÐ“Ð¾Ð»ÑƒÐ±Ð¾Ð¹\x1b[0m;\n 97 - \x1b[97mÐ‘ÐµÐ»Ñ‹Ð¹\x1b[0m;\n 98 - \x1b[98mÐ¡Ð²ÐµÑ‚Ð»Ð¾-ÑÐµÑ€Ñ‹Ð¹\x1b[0m; \nÐ£ÐºÐ°Ð¶Ð¸Ñ‚Ðµ Ñ†Ð²ÐµÑ‚ ÐºÑ€ÐµÑÑ‚Ð¸ÐºÐ°: ";
+                    cout << " Öâåòà: 90 - \x1b[90mÑåðûé\x1b[0m;\n 91 - \x1b[91mÊðàñíûé\x1b[0m;\n 92 - \x1b[92mÇåëåíûé\x1b[0m;\n 93 - \x1b[93mÏåñî÷íûé\x1b[0m;\n 94 - \x1b[94mÑèíèé\x1b[0m;\n 95 - \x1b[95mÔèîëåòîâûé\x1b[0m;\n 96 - \x1b[96mÃîëóáîé\x1b[0m;\n 97 - \x1b[97mÁåëûé\x1b[0m;\n 98 - \x1b[98mÑâåòëî-ñåðûé\x1b[0m; \nÓêàæèòå öâåò êðåñòèêà: ";
                     cin >> colorCross;
-                    cout << "\nÐ’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ†Ð²ÐµÑ‚ Ð½Ð¾Ð»Ð¸ÐºÐ°: ";
+                    cout << "\nÂâåäèòå öâåò íîëèêà: ";
                     cin >> colorNull;
                     cout << endl;
                     BackToMenu();
@@ -783,16 +783,16 @@ int main()
                 else if (pickMenuOpt == 2)
                 {
                     system("cls");
-                    cout << "[!] Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ ÐºÑ‚Ð¾ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ñ…Ð¾Ð´Ð¸Ñ‚\n[1] ÐšÑ€ÐµÑÑ‚Ð¸Ðº\n[2] ÐÐ¾Ð»Ð¸Ðº\n";
+                    cout << "[!] Âûáåðèòå êòî ïåðâûé õîäèò\n[1] Êðåñòèê\n[2] Íîëèê\n";
                     cin >> ternPick;
-                    startPlayer = tern(ternPick);
+                    startPlayer = switchTern(ternPick);
                     BackToMenu();
 
                 }
                 else if (pickMenuOpt == 3)
                 {
                     system("cls");
-                    cout << "[!] Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¿Ð¾Ð»Ñ\n\n[1] 3x3\n[2] 4x4\n[3] 5x5\n";
+                    cout << "[!] Âûáåðèòå ðàçìåð ïîëÿ\n\n[1] 3x3\n[2] 4x4\n[3] 5x5\n";
                     cin >> sizeBoard;
                     BackToMenu();
 
@@ -817,7 +817,7 @@ int main()
         }
         else if (pickMenu == 3)
         {
-            Rules();
+            showRules();
             BackToMenu();
 
         }
